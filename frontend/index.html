@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Math API Frontend</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="img/math-book.png">
+</head>
+
+<body>
+    <div class="container">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <span class="sidebar-title">Math API</span>
+                <button class="sidebar-toggle" id="sidebarToggle">☰</button>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#power" id="nav-power">Power</a></li>
+                    <li><a href="#fibonacci" id="nav-fibonacci">Fibonacci</a></li>
+                    <li><a href="#factorial" id="nav-factorial">Factorial</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <section id="page-power" class="page">
+                <h2>Power</h2>
+                <p class="desc">Calculates the result of raising a number to a power: <i>base<sup>exp</sup></i>.
+                    Example: 2<sup>3</sup> = 8.</p>
+                <input id="pow-base" type="number" placeholder="Base">
+                <input id="pow-exp" type="number" placeholder="Exponent">
+                <button onclick="callPow()">Calculate</button>
+                <div class="result" id="result-power"></div>
+            </section>
+            <section id="page-fibonacci" class="page" style="display:none;">
+                <h2>Fibonacci</h2>
+                <p class="desc">Returns the n-th number in the Fibonacci sequence. Example: F(5) = 5.</p>
+                <input id="fib-n" type="number" placeholder="n">
+                <button onclick="callFib()">Calculate</button>
+                <div class="result" id="result-fibonacci"></div>
+            </section>
+            <section id="page-factorial" class="page" style="display:none;">
+                <h2>Factorial</h2>
+                <p class="desc">Calculates the factorial of a number n: <i>n!</i>. Example: 5! = 120.</p>
+                <input id="fact-n" type="number" placeholder="n">
+                <button onclick="callFact()">Calculate</button>
+                <div class="result" id="result-factorial"></div>
+            </section>
+        </main>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
